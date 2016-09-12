@@ -28,6 +28,7 @@ class LawnDart : MonoBehaviour {
         if (!wait) StartCoroutine(Colliding());
     }
 
+    // coroutines are a great way to deal with timed sequences of events
     IEnumerator Colliding() {
         wait = true;
         yield return new WaitForSeconds(rigidbody.velocity.magnitude*length);
