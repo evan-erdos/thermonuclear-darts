@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityStandardAssets.CrossPlatformInput;
 
 class LawnDartThrower : MonoBehaviour {
 
@@ -10,7 +9,7 @@ class LawnDartThrower : MonoBehaviour {
     [SerializeField] Transform throwDirection;
     [SerializeField] GameObject prefab;
 
-	void Update() { fire = CrossPlatformInputManager.GetButton("Fire1"); }
+	void Update() { fire = Input.GetButton("Fire1"); }
 
     void FixedUpdate() { if (fire && !wait) StartCoroutine(Firing()); }
 
@@ -23,7 +22,7 @@ class LawnDartThrower : MonoBehaviour {
         var rigidbody = instance.GetComponent<Rigidbody>();
         rigidbody.AddForce(
             force: rigidbody.transform.forward.normalized*force,
-            mode: ForceMode.VelocityChange);
+            mode: ForceMode.Impulse);
         yield return new WaitForSeconds(rate);
         wait = false;
     }

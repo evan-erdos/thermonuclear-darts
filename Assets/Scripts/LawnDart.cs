@@ -5,7 +5,7 @@ using System.Collections;
 class LawnDart : MonoBehaviour {
 
     bool wait;
-    float length = 0.1f, aerodynamicFactor = 100f;
+    float length = 0.1f, aerodynamicFactor = 1000f;
     Transform center;
 
 // disables a silly warning
@@ -43,7 +43,9 @@ class LawnDart : MonoBehaviour {
 
         rigidbody.rotation = Quaternion.Slerp(
             rigidbody.rotation,
-            Quaternion.LookRotation(rigidbody.velocity, transform.up),
+            Quaternion.LookRotation(
+                rigidbody.velocity + Physics.gravity*Time.fixedDeltaTime,
+                transform.up),
             Time.fixedDeltaTime*aerodynamicFactor);
     }
 
