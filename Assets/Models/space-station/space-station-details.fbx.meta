@@ -33,6 +33,7 @@ ModelImporter:
     2300010: space_station_details
     2300012: wire_conduit
     2300014: wire_conduit_flat
+    2300016: Wire_conduit
     3300000: PM3D_Cube3D_MeshPart0
     3300002: PM3D_Cube3D_MeshPart1
     3300004: PM3D_Cube3D
@@ -41,6 +42,7 @@ ModelImporter:
     3300010: space_station_details
     3300012: wire_conduit
     3300014: wire_conduit_flat
+    3300016: Wire_conduit
     4300000: PM3D_Cube3D_MeshPart0
     4300002: PM3D_Cube3D_MeshPart1
     4300004: PM3D_Cube3D
@@ -49,6 +51,7 @@ ModelImporter:
     4300010: space_station_details
     4300012: wire_conduit
     4300014: wire_conduit_flat
+    4300016: Wire_conduit
   materials:
     importMaterials: 1
     materialName: 0
