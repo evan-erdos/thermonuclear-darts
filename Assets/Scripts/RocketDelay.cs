@@ -4,7 +4,7 @@ using System.Collections;
 public class RocketDelay : MonoBehaviour {
 
     IEnumerator Start() {
-        yield return new WaitForSeconds(100);
+        yield return new WaitForSeconds(2);
         GetComponent<Missile>().Launch("Let's Go Crazy!");
     }
 

@@ -26,10 +26,10 @@ public class VirtualTerrain : MonoBehaviour {
         yield return new WaitForSeconds(2);
         Render();
         yield return new WaitForSeconds(2);
-        while (true) {
-            yield return new WaitForFixedUpdate();
-            transform.Rotate(0,spin*Time.fixedDeltaTime,0);
-        }
+//        while (true) {
+//            yield return new WaitForFixedUpdate();
+//            transform.Rotate(0,spin*Time.fixedDeltaTime,0);
+//        }
     }
 
 

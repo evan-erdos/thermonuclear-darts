@@ -15,6 +15,8 @@ ModelImporter:
     100014: space_station_details
     100016: wire_conduit
     100018: wire_conduit_flat
+    100020: Hatch
+    100022: Tube
     400000: PM3D_Cube3D_MeshPart0
     400002: PM3D_Cube3D_MeshPart1
     400004: //RootNode
@@ -25,6 +27,8 @@ ModelImporter:
     400014: space_station_details
     400016: wire_conduit
     400018: wire_conduit_flat
+    400020: Hatch
+    400022: Tube
     2300000: PM3D_Cube3D_MeshPart0
     2300002: PM3D_Cube3D_MeshPart1
     2300004: PM3D_Cube3D
@@ -34,6 +38,8 @@ ModelImporter:
     2300012: wire_conduit
     2300014: wire_conduit_flat
     2300016: Wire_conduit
+    2300018: Hatch
+    2300020: Tube
     3300000: PM3D_Cube3D_MeshPart0
     3300002: PM3D_Cube3D_MeshPart1
     3300004: PM3D_Cube3D
@@ -43,6 +49,8 @@ ModelImporter:
     3300012: wire_conduit
     3300014: wire_conduit_flat
     3300016: Wire_conduit
+    3300018: Hatch
+    3300020: Tube
     4300000: PM3D_Cube3D_MeshPart0
     4300002: PM3D_Cube3D_MeshPart1
     4300004: PM3D_Cube3D
@@ -52,6 +60,8 @@ ModelImporter:
     4300012: wire_conduit
     4300014: wire_conduit_flat
     4300016: Wire_conduit
+    4300018: Tube
+    4300020: Hatch
   materials:
     importMaterials: 1
     materialName: 0
@@ -76,7 +86,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 10000
+    globalScale: 20000
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
