@@ -42,7 +42,7 @@ and you'll need to download the appropriate version of the game for your system.
 [wiki]: <https://github.com/evan-erdos/thermonuclear-darts/wiki/>
 [mit]: <http://img.shields.io/:license-MIT-blue.svg>
 [license]: <http://bescott.mit-license.org>
-[v]: <https://img.shields.io/badge/version-0.1.0-blue.svg>
+[v]: <https://img.shields.io/badge/version-0.2.0-blue.svg>
 [tag]: <https://github.com/evan-erdos/electric-darts/releases/>
 [build]: <https://img.shields.io/badge/build-passing-brightgreen.svg>
 
