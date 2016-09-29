@@ -24,7 +24,7 @@ and you'll need to download the appropriate version of the game for your system.
 - space station model finalized, now twice as large + more details!
 - added a *sloppy* workaround for the perspective hack: 
   now the earth is **very** close to the station, and appears to be much "smaller"
-- added tasty glowing, flickering CRT monitors, 
+- added crispy glowing, flickering CRT monitors, 
   displaying tasteful opcodes from the Apollo guidance computer
 - virtual terrain now much larger, and now serves as the main game field
 - much, much more!
