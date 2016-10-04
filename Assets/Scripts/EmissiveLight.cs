@@ -21,4 +21,15 @@ public class EmissiveLight : MonoBehaviour {
                     material.SetColor("_EmissionColor", value);
         }
     }
+
+
+    IEnumerator HueShiftRainbows() {
+        float s = 0.65f, v = 1f;
+        while (true) {
+            float h, s0, v0;
+            Color.RGBToHSV(EmissiveColor, out h, out s0, out v0);
+            EmissiveColor = Color.HSVToRGB((h+0.001f)%1, s, v);
+            yield return null;
+        }
+    }
 }
