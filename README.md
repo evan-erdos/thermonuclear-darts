@@ -1,48 +1,60 @@
 
 Global Thermonuclear Lawn Darts
 ===============================
-[![v]][tag] 
-[![build]][v0.2.0-alpha]
+<video autoplay src="https://cmu.box.com/shared/static/9ubgrb7dhggq0vim8i6593a80ccr0aqb.mov"></video>
+[![version]][releases] [![build]][releases]
 
-Let's Play Global Thermonuclear Lawn Darts.
-Developed by [Deus Deceptor][site].
+```
+> Wouldn't you prefer a nice game of chess?
+
+> No, maybe later. I want to play Global Thermonuclear Lawn Darts.
+```
+
+Developed by [Dues Deceptor][site].
 
 ---
 
-## Getting Started ##
-This is a game designed specifically for the HTC Vive. 
-You can read more about the system requirements and the Vive on our [wiki][].
+### Getting Started ###
+This is a VR game about spaceships designed specifically for the HTC Vive.
+Check out the [Releases][] page to find a build for your system.
 
 ### Installing ###
-You'll need to set up your Vive as you normally do, 
-and you'll need to download the appropriate version of the game for your system.
+Unfortunately, you will need an unreasonably powerful computer to play this game.
+If you happen to have a Vive and a graphics card which spits hot fire,
+you can go to the [Releases][] page and download the latest version.
+If you do not happen to have a Vive and a graphics card which spits hot fire,
+you can rest easy knowing that someday, if you work very hard for a very long time,
+someday, maybe someday, you might own a computer that can run this game.
 
-## Changelog ##
-### [v0.2.0-alpha][] ###
+### Changelog ###
+#### [v1.0.0-alpha][releases] ####
+- added indicator lights to the station
+- background music and narration + management code added
+- added control panel, clicky butons, and master alarm
+
+#### [v0.3.0-alpha][releases] ####
+- refined dart throw, now using trigger and release to throw
+- fixed the apparent scale of the space station, added some CRT screens
+
+#### [v0.2.0-alpha][releases] ####
 - refined dart throw, added different physics profiles for playtesting
 - implemented "levels", e.g., different cityscapes to throw darts at
 - space station model finalized, now twice as large + more details!
-- added a *sloppy* workaround for the perspective hack: 
-  now the earth is **very** close to the station, and appears to be much "smaller"
-- added crispy glowing, flickering CRT monitors, 
+- added a *sloppy* workaround for the perspective hack:
+  now the earth is *very* close to the station, and appears to be much "smaller"
+- added crispy glowing, flickering CRT monitors,
   displaying tasteful opcodes from the Apollo guidance computer
 - virtual terrain now much larger, and now serves as the main game field
 - much, much more!
 
-### [v0.1.0-alpha][] ###
+#### [v0.1.0-alpha][releases] ####
 - migrated from GVR placeholders to Vive API
 - rocket, lawn dart and station modeled, merged with main build
 - basic aerodynamic effect applied to dart
 - virtual terrain established, still work to do with blendshapes / levels
 
-[v0.2.0-alpha]: <https://github.com/evan-erdos/thermonuclear-darts/releases/tag/v0.2.0-alpha/>
-[v0.1.0-alpha]: <https://github.com/evan-erdos/thermonuclear-darts/releases/tag/v0.1.0-alpha/>
-
-[site]: <http://google.com/>
-[wiki]: <https://github.com/evan-erdos/thermonuclear-darts/wiki/>
-[mit]: <http://img.shields.io/:license-MIT-blue.svg>
-[license]: <http://bescott.mit-license.org>
-[v]: <https://img.shields.io/badge/version-0.2.0-blue.svg>
-[tag]: <https://github.com/evan-erdos/electric-darts/releases/>
+[site]: <http://bescott.org/thermonuclear-darts/>
+[docs]: <https://github.com/evan-erdos/thermonuclear-darts/wiki/>
+[version]: <https://img.shields.io/badge/version-1.0.1-red.svg>
+[releases]: <https://github.com/evan-erdos/electric-darts/releases/>
 [build]: <https://img.shields.io/badge/build-passing-brightgreen.svg>
-
