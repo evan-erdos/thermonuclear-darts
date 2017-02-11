@@ -1,35 +1,40 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof (Rigidbody))]
+[RequireComponent(typeof(Rigidbody))]
 class LawnDart : MonoBehaviour {
 
     bool wait;
-    float length = 0.1f, aerodynamicFactor = 1000f;
+    [SerializeField] float aerodynamicFactor = 100f;
+    [SerializeField] GameObject particles;
     Transform center;
 
-// disables a silly warning
 #pragma warning disable 0108
     Rigidbody rigidbody;
 #pragma warning restore 0108
 
-    public float ForwardVelocity {
-        get {
-            return Mathf.Max(0,transform.InverseTransformDirection(rigidbody.velocity).z);
-        }
-    }
+    public float ForwardVelocity { get {
+        return Mathf.Max(0,
+            transform.InverseTransformDirection(
+                rigidbody.velocity).z); } }
 
 
     void Awake() {
         center = transform.Find("center");
         rigidbody = GetComponent<Rigidbody>();
-        rigidbody.centerOfMass = center.position;
+        rigidbody.centerOfMass = center.localPosition;
     }
 
+    IEnumerator Start() {
+        while (true) {
+            yield return new WaitForSeconds(0.01f);
+            wait = false;
+        }
+    }
 
-    // runs on GPU time / with the physics step
     void FixedUpdate() {
-        if (rigidbody.isKinematic || rigidbody.velocity.magnitude<0) return;
+        if (rigidbody.isKinematic) return;
+        if (rigidbody.velocity.magnitude<float.Epsilon) return;
 
         var deltaDirection = Vector3.Dot(
             transform.forward,
@@ -38,33 +43,29 @@ class LawnDart : MonoBehaviour {
 
         rigidbody.velocity = Vector3.Lerp(
             rigidbody.velocity,
-            transform.forward*ForwardVelocity,
-            deltaDirection*Time.fixedDeltaTime*ForwardVelocity);
+            transform.forward * ForwardVelocity,
+            deltaDirection * Time.fixedDeltaTime * ForwardVelocity);
 
-        rigidbody.rotation = Quaternion.Slerp(
+       rigidbody.rotation = Quaternion.Slerp(
             rigidbody.rotation,
             Quaternion.LookRotation(
-                rigidbody.velocity + Physics.gravity*Time.fixedDeltaTime,
-                transform.up),
-            Time.fixedDeltaTime*aerodynamicFactor);
+                rigidbody.velocity-Physics.gravity*Time.fixedDeltaTime,
+                Vector3.up),
+            Time.fixedDeltaTime * aerodynamicFactor);
     }
 
 
-    // callback for collisions, must have this exact function signature
     void OnCollisionEnter(Collision collision) {
+        if (wait) return;
         rigidbody.isKinematic = true;
         wait = true;
+        foreach (var contact in collision.contacts) {
+            Instantiate(
+                particles,
+                contact.point,
+                Quaternion.LookRotation(contact.point+contact.normal));
+            wait = true;
+            break;
+        }
     }
-
-    // called when the front "trigger" collider is tripped
-    void OnTriggerEnter(Collider other) { if (!wait) StartCoroutine(Colliding()); }
-
-    // coroutines are a great way to deal with timed sequences of events
-    IEnumerator Colliding() {
-        wait = true;
-        yield return new WaitForSeconds(rigidbody.velocity.magnitude*length);
-        rigidbody.isKinematic = true;
-        //wait = false;
-    }
-
 }

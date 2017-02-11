@@ -7,7 +7,7 @@ class SpaceCamera : MonoBehaviour {
         //GetComponent<GvrHead>().trackRotation = false;
         //GetComponent<GvrHead>().trackPosition = false;
         while(true) {
-            yield return new WaitForFixedUpdate();
+            yield return null;
             transform.localPosition = Camera.main.transform.position/100000;
             transform.localRotation = Camera.main.transform.rotation;
         }
