@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: 3830451b477884b0bbb9b8dddd8b0a40
+timeCreated: 1483968779
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: fireburst_engine_l
+    100004: fireburst_engine_r
+    100006: fireburst_speeder_cockpit
+    100008: fireburst_speeder_frame
+    100010: fireburst_speeder_panel_0
+    100012: fireburst_speeder_panel_l_0
+    100014: fireburst_speeder_panel_l_1
+    100016: fireburst_speeder_panel_l_2
+    100018: fireburst_speeder_panel_l_4
+    100020: fireburst_speeder_panel_l_5
+    100022: fireburst_speeder_panel_r_0
+    100024: fireburst_speeder_panel_r_1
+    100026: fireburst_speeder_panel_r_2
+    100028: fireburst_speeder_panel_r_3
+    100030: fireburst_speeder_panel_r_4
+    100032: fireburst_speeder_cockpit_glass
+    100034: fireburst_speeder_engine_l
+    100036: fireburst_speeder_engine_r
+    100038: fireburst_speeder_fuselage
+    100040: fireburst_speeder_nacelle_l
+    100042: fireburst_speeder_nacelle_r
+    100044: fireburst_speeder_panel
+    100046: fireburst_speeder_panel_l
+    100048: fireburst_speeder_panel_l_3
+    100050: fireburst_speeder_panel_r
+    400000: //RootNode
+    400002: fireburst_engine_l
+    400004: fireburst_engine_r
+    400006: fireburst_speeder_cockpit
+    400008: fireburst_speeder_frame
+    400010: fireburst_speeder_panel_0
+    400012: fireburst_speeder_panel_l_0
+    400014: fireburst_speeder_panel_l_1
+    400016: fireburst_speeder_panel_l_2
+    400018: fireburst_speeder_panel_l_4
+    400020: fireburst_speeder_panel_l_5
+    400022: fireburst_speeder_panel_r_0
+    400024: fireburst_speeder_panel_r_1
+    400026: fireburst_speeder_panel_r_2
+    400028: fireburst_speeder_panel_r_3
+    400030: fireburst_speeder_panel_r_4
+    400032: fireburst_speeder_cockpit_glass
+    400034: fireburst_speeder_engine_l
+    400036: fireburst_speeder_engine_r
+    400038: fireburst_speeder_fuselage
+    400040: fireburst_speeder_nacelle_l
+    400042: fireburst_speeder_nacelle_r
+    400044: fireburst_speeder_panel
+    400046: fireburst_speeder_panel_l
+    400048: fireburst_speeder_panel_l_3
+    400050: fireburst_speeder_panel_r
+    2300000: fireburst_engine_l
+    2300002: fireburst_engine_r
+    2300004: fireburst_speeder_cockpit
+    2300006: fireburst_speeder_frame
+    2300008: fireburst_speeder_panel_0
+    2300010: fireburst_speeder_panel_l_0
+    2300012: fireburst_speeder_panel_l_1
+    2300014: fireburst_speeder_panel_l_2
+    2300016: fireburst_speeder_panel_l_4
+    2300018: fireburst_speeder_panel_l_5
+    2300020: fireburst_speeder_panel_r_0
+    2300022: fireburst_speeder_panel_r_1
+    2300024: fireburst_speeder_panel_r_2
+    2300026: fireburst_speeder_panel_r_3
+    2300028: fireburst_speeder_panel_r_4
+    2300030: fireburst_speeder_cockpit_glass
+    2300032: fireburst_speeder_engine_l
+    2300034: fireburst_speeder_engine_r
+    2300036: fireburst_speeder_fuselage
+    2300038: fireburst_speeder_nacelle_l
+    2300040: fireburst_speeder_nacelle_r
+    2300042: fireburst_speeder_panel
+    2300044: fireburst_speeder_panel_l
+    2300046: fireburst_speeder_panel_l_3
+    2300048: fireburst_speeder_panel_r
+    3300000: fireburst_engine_l
+    3300002: fireburst_engine_r
+    3300004: fireburst_speeder_cockpit
+    3300006: fireburst_speeder_frame
+    3300008: fireburst_speeder_panel_0
+    3300010: fireburst_speeder_panel_l_0
+    3300012: fireburst_speeder_panel_l_1
+    3300014: fireburst_speeder_panel_l_2
+    3300016: fireburst_speeder_panel_l_4
+    3300018: fireburst_speeder_panel_l_5
+    3300020: fireburst_speeder_panel_r_0
+    3300022: fireburst_speeder_panel_r_1
+    3300024: fireburst_speeder_panel_r_2
+    3300026: fireburst_speeder_panel_r_3
+    3300028: fireburst_speeder_panel_r_4
+    3300030: fireburst_speeder_cockpit_glass
+    3300032: fireburst_speeder_engine_l
+    3300034: fireburst_speeder_engine_r
+    3300036: fireburst_speeder_fuselage
+    3300038: fireburst_speeder_nacelle_l
+    3300040: fireburst_speeder_nacelle_r
+    3300042: fireburst_speeder_panel
+    3300044: fireburst_speeder_panel_l
+    3300046: fireburst_speeder_panel_l_3
+    3300048: fireburst_speeder_panel_r
+    4300000: fireburst_speeder_frame
+    4300002: fireburst_engine_l
+    4300004: fireburst_engine_r
+    4300006: fireburst_speeder_panel_r_0
+    4300008: fireburst_speeder_panel_l_0
+    4300010: fireburst_speeder_panel_r_1
+    4300012: fireburst_speeder_panel_l_1
+    4300014: fireburst_speeder_panel_l_2
+    4300016: fireburst_speeder_panel_r_2
+    4300018: fireburst_speeder_panel_l_4
+    4300020: fireburst_speeder_panel_r_3
+    4300022: fireburst_speeder_panel_0
+    4300024: fireburst_speeder_panel_l_5
+    4300026: fireburst_speeder_panel_r_4
+    4300028: fireburst_speeder_cockpit
+    4300030: fireburst_speeder_cockpit_glass
+    4300032: fireburst_speeder_nacelle_r
+    4300034: fireburst_speeder_engine_r
+    4300036: fireburst_speeder_fuselage
+    4300038: fireburst_speeder_panel
+    4300040: fireburst_speeder_panel_r
+    4300042: fireburst_speeder_panel_l
+    4300044: fireburst_speeder_nacelle_l
+    4300046: fireburst_speeder_engine_l
+    4300048: fireburst_speeder_panel_l_3
+    6400000: fireburst_speeder_cockpit
+    6400002: fireburst_speeder_cockpit_glass
+    6400004: fireburst_speeder_engine_l
+    6400006: fireburst_speeder_engine_r
+    6400008: fireburst_speeder_fuselage
+    6400010: fireburst_speeder_nacelle_l
+    6400012: fireburst_speeder_nacelle_r
+    6400014: fireburst_speeder_panel
+    6400016: fireburst_speeder_panel_l
+    6400018: fireburst_speeder_panel_l_0
+    6400020: fireburst_speeder_panel_l_2
+    6400022: fireburst_speeder_panel_l_3
+    6400024: fireburst_speeder_panel_l_4
+    6400026: fireburst_speeder_panel_r
+    6400028: fireburst_speeder_panel_r_0
+    6400030: fireburst_speeder_panel_r_1
+    6400032: fireburst_speeder_panel_r_2
+    6400034: fireburst_speeder_panel_r_3
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

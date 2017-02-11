@@ -15,16 +15,16 @@ public class SkinnedMeshFollower : MonoBehaviour {
         collider = GetComponent<MeshCollider>();
 	}
 
-	IEnumerator Start() {
-		while (true) {
-			yield return new WaitForSeconds(1);
-			var mesh = new Mesh();
-	        renderer.BakeMesh(mesh);
-            if (!collider) break;
-	        collider.sharedMesh = null;
-	        collider.sharedMesh = mesh;
-		}
-	}
+	// IEnumerator Start() {
+	// 	while (true) {
+	// 		yield return new WaitForSeconds(1);
+	// 		var mesh = new Mesh();
+	//         renderer.BakeMesh(mesh);
+ //            if (!collider) break;
+	//         collider.sharedMesh = null;
+	//         collider.sharedMesh = mesh;
+	// 	}
+	// }
 
 	void FixedUpdate() {
 		for (var i=0; i<renderer.sharedMesh.blendShapeCount; i++)
