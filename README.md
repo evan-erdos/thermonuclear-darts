@@ -1,4 +1,4 @@
-![](https://cmu.box.com/shared/static/n4efgxnv2rzbc1kxpffujmt1applxa4f.gif)
+![gtld](http://cmu.box.com/shared/static/n4efgxnv2rzbc1kxpffujmt1applxa4f.gif)
 
 Global Thermonuclear Lawn Darts
 ===============================
