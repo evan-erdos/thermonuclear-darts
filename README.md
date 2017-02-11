@@ -1,4 +1,4 @@
-![icon][]
+![](https://cmu.box.com/shared/static/n4efgxnv2rzbc1kxpffujmt1applxa4f.gif)
 
 Global Thermonuclear Lawn Darts
 ===============================
@@ -57,7 +57,6 @@ someday, maybe someday, you might own a computer that can run this game.
 - basic aerodynamic effect applied to dart
 - virtual terrain established, still work to do with blendshapes / levels
 
-[icon]: <https://github.com/evan-erdos/thermonuclear-darts/raw/master/thermonuclear-darts.gif>
 [site]: <http://bescott.org/thermonuclear-darts/>
 [docs]: <https://github.com/evan-erdos/thermonuclear-darts/wiki/>
 [version]: <https://img.shields.io/badge/version-1.0.1-red.svg>
