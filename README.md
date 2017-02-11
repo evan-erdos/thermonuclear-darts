@@ -1,10 +1,11 @@
+![icon][]
 
 Global Thermonuclear Lawn Darts
 ===============================
 <!--
 <video autoplay src="https://cmu.box.com/shared/static/9ubgrb7dhggq0vim8i6593a80ccr0aqb.mov"></video>
 -->
-![icon][]
+
 [![version]][releases] [![build]][releases]
 
 ```
