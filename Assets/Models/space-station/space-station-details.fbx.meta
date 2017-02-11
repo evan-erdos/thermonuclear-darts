@@ -1,0 +1,128 @@
+fileFormatVersion: 2
+guid: 60c4867f5b8f945adbf6010e6d0751d9
+timeCreated: 1474484940
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: PM3D_Cube3D_MeshPart0
+    100002: PM3D_Cube3D_MeshPart1
+    100004: //RootNode
+    100006: PM3D_Cube3D
+    100008: Wire_conduit
+    100010: Wire_conduit_MeshPart0
+    100012: Wire_conduit_MeshPart1
+    100014: space_station_details
+    100016: wire_conduit
+    100018: wire_conduit_flat
+    100020: Hatch
+    100022: Tube
+    400000: PM3D_Cube3D_MeshPart0
+    400002: PM3D_Cube3D_MeshPart1
+    400004: //RootNode
+    400006: PM3D_Cube3D
+    400008: Wire_conduit
+    400010: Wire_conduit_MeshPart0
+    400012: Wire_conduit_MeshPart1
+    400014: space_station_details
+    400016: wire_conduit
+    400018: wire_conduit_flat
+    400020: Hatch
+    400022: Tube
+    2300000: PM3D_Cube3D_MeshPart0
+    2300002: PM3D_Cube3D_MeshPart1
+    2300004: PM3D_Cube3D
+    2300006: Wire_conduit_MeshPart0
+    2300008: Wire_conduit_MeshPart1
+    2300010: space_station_details
+    2300012: wire_conduit
+    2300014: wire_conduit_flat
+    2300016: Wire_conduit
+    2300018: Hatch
+    2300020: Tube
+    3300000: PM3D_Cube3D_MeshPart0
+    3300002: PM3D_Cube3D_MeshPart1
+    3300004: PM3D_Cube3D
+    3300006: Wire_conduit_MeshPart0
+    3300008: Wire_conduit_MeshPart1
+    3300010: space_station_details
+    3300012: wire_conduit
+    3300014: wire_conduit_flat
+    3300016: Wire_conduit
+    3300018: Hatch
+    3300020: Tube
+    4300000: PM3D_Cube3D_MeshPart0
+    4300002: PM3D_Cube3D_MeshPart1
+    4300004: PM3D_Cube3D
+    4300006: Wire_conduit_MeshPart0
+    4300008: Wire_conduit_MeshPart1
+    4300010: space_station_details
+    4300012: wire_conduit
+    4300014: wire_conduit_flat
+    4300016: Wire_conduit
+    4300018: Tube
+    4300020: Hatch
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 20000
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
