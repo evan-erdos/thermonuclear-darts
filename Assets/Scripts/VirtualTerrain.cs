@@ -6,12 +6,9 @@ using System.Collections.Generic;
 [RequireComponent(typeof(SkinnedMeshRenderer))]
 [RequireComponent(typeof(MeshCollider))]
 public class VirtualTerrain : MonoBehaviour {
-
     bool wait, waitRockets;
     EmissiveLight emission;
-
 	ui::Scrollbar scrollbar;
-
 
 	[SerializeField] GameObject[] enables;
 	[SerializeField] GameObject[] disables;
@@ -29,15 +26,13 @@ public class VirtualTerrain : MonoBehaviour {
     [SerializeField] long nextCityCasualties;
     private AudioClip nextCityHitSound;
     [SerializeField] Radio radio;
-#pragma warning disable 0108
-    AudioSource audio;
-    SkinnedMeshRenderer renderer;
-    MeshCollider collider;
-#pragma warning restore 0108
+    new AudioSource audio;
+    new SkinnedMeshRenderer renderer;
+    new MeshCollider collider;
 
 	public bool IsDoomsday { get; set; }
     public int Count {get;private set;}
-    public OrderList<City> Cities {get;private set;} 
+    public OrderList<City> Cities {get;private set;}
     List<GameObject> darts = new List<GameObject>();
     RandList<Transform> rocketList;
 
@@ -72,8 +67,6 @@ public class VirtualTerrain : MonoBehaviour {
     void OnTriggerEnter(Collider collider) {
         if (!collider.GetComponentInParent<Rigidbody>()) return;
         if (!collider.GetComponentInParent<Rigidbody>().GetComponent<LawnDart>()) return;
-
-        //ShootRocket();
     }
 
     public void ShootRocket() {
@@ -107,8 +100,7 @@ public class VirtualTerrain : MonoBehaviour {
         if (radio.isInterrupting()) audio.PlayOneShot(citySound, 0.15f);
         else audio.PlayOneShot(citySound,0.5f);
         radio.playRadioResponse(nextCityHitSound);
-        foreach (var city in Cities)
-            city.gameObject.SetActive(false);     
+        foreach (var city in Cities) city.gameObject.SetActive(false);
         Render();
     }
 
@@ -118,11 +110,8 @@ public class VirtualTerrain : MonoBehaviour {
 		Instantiate (doomsday);
 		endscript.enabled = true;
 		endscript.enabled = true;
-
-		foreach (var elem in disables)
-			elem.SetActive (false);
-		foreach (var elem in enables)
-			elem.SetActive (true);
+		foreach (var elem in disables) elem.SetActive (false);
+		foreach (var elem in enables) elem.SetActive (true);
 
 	}
 
@@ -131,13 +120,10 @@ public class VirtualTerrain : MonoBehaviour {
 
 
     void Render(City city) {
-        if (!wait && city)
-        {
-            StartCoroutine(Rendering(city));
-            nextCityHitSound = city.afterHitRadio;
-            nextCityCasualties = city.population;
-        }
-
+        if (wait || !city) return;
+        StartCoroutine(Rendering(city));
+        nextCityHitSound = city.afterHitRadio;
+        nextCityCasualties = city.population;
     }
 
 
@@ -149,38 +135,27 @@ public class VirtualTerrain : MonoBehaviour {
         foreach (var dart in darts) Destroy(dart);
         for (var i=0; i<Count; ++i) {
             var blend = renderer.GetBlendShapeWeight(i);
-            float speed = 0f;
+            var speed = 0f;
             while (!Mathf.Approximately(blend,0)) {
                 yield return new WaitForFixedUpdate();
                 blend = Mathf.SmoothDamp(blend, 0, ref speed, 0.1f);
                 renderer.SetBlendShapeWeight(i, blend);
-                GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(i, blend); // HACK
+                GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(i, blend);
             }
         }
         foreach (var other in Cities) {
             yield return StartCoroutine(Rendering(
-                shape: other.shape,
-                blend: 0,
-                speed: 0,
-                delay: 0.2f,
-                height: 0,
-                spin: 0,
-                color: 0));
+                shape: other.shape, blend: 0, speed: 0,
+                delay: 0.2f, height: 0, spin: 0, color: 0));
             other.gameObject.SetActive(false);
         }
 		LawnDart.DestroyAll ();
         yield return new WaitForSeconds(0.1f);
-        if (radio.isInterrupting())
-            audio.PlayOneShot(sound, 0.15f);
+        if (radio.isInterrupting()) audio.PlayOneShot(sound, 0.15f);
         else audio.PlayOneShot(sound, 0.3f);
         yield return StartCoroutine(Rendering(
-            shape: city.shape,
-            blend: city.blend,
-            speed: city.speed,
-            delay: city.delay,
-            height: city.height,
-            spin: city.spin,
-            color: city.color));
+            shape: city.shape, blend: city.blend, speed: city.speed,
+            delay: city.delay, height: city.height, spin: city.spin, color: city.color));
         yield return new WaitForSeconds(0.1f);
         //renderer.sharedMaterial = grass;
         city.gameObject.SetActive(true);
@@ -188,49 +163,25 @@ public class VirtualTerrain : MonoBehaviour {
     }
 
 
-    IEnumerator RenderingHeight(
-                    int shape,
-                    float blend,
-                    float speed,
-                    float delay,
-                    float height,
-                    float spin=0f,
-                    float color=0f) {
+    IEnumerator RenderingHeight(int shape, float blend, float speed, float delay, float height, float spin=0, float color=0) {
         while (!Mathf.Approximately(blend,height)) {
             yield return new WaitForFixedUpdate();
-        
             blend = Mathf.SmoothDamp(blend, height, ref speed, delay);
             renderer.SetBlendShapeWeight(shape, blend);
-            GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(shape, blend); // HACK
-
+            GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(shape,blend);
         }
     }
 
-    IEnumerator RenderingAngle(
-                    int shape,
-                    float blend,
-                    float speed,
-                    float delay,
-                    float height,
-                    float spin=0f,
-                    float color=0f) {
+    IEnumerator RenderingAngle(int shape, float blend, float speed, float delay, float height, float spin=0, float color=0) {
         var rotation = Quaternion.Euler(0,spin,0);
         while (transform.localRotation!=rotation) {
             yield return new WaitForFixedUpdate();
             transform.localRotation = Quaternion.Slerp(
-                transform.localRotation, rotation,
-                Time.fixedDeltaTime * 4f);
+                transform.localRotation, rotation, Time.fixedDeltaTime*4);
         }
     }
 
-    IEnumerator RenderingColor(
-                    int shape,
-                    float blend,
-                    float speed,
-                    float delay,
-                    float height,
-                    float spin=0f,
-                    float color=0f) {
+    IEnumerator RenderingColor(int shape, float blend, float speed, float delay, float height, float spin=0, float color=0) {
         float h, s0, v0, s = 0.65f, v = 1f, t = 0.5f;
         while ((t -= Time.fixedDeltaTime) - float.Epsilon > 0) {
             Color.RGBToHSV(emission.EmissiveColor, out h, out s0, out v0);
@@ -240,18 +191,10 @@ public class VirtualTerrain : MonoBehaviour {
         }
     }
 
-    IEnumerator Rendering(
-                    int shape,
-                    float blend,
-                    float speed,
-                    float delay,
-                    float height,
-                    float spin=0f,
-                    float color=0f) {
+    IEnumerator Rendering(int shape, float blend, float speed, float delay, float height, float spin=0, float color=0) {
         if (height == 0) yield return new WaitForSeconds(1);
         yield return StartCoroutine(RenderingHeight(shape,blend,speed,delay,height,spin,color));
-        if (emission)
-            yield return StartCoroutine(RenderingColor(shape,blend,speed,delay,height,spin,color));
+        if (emission) yield return StartCoroutine(RenderingColor(shape,blend,speed,delay,height,spin,color));
         //yield return StartCoroutine(RenderingAngle(shape,blend,speed,delay,height,spin,color));
         var mesh = new Mesh();
         renderer.BakeMesh(mesh);
@@ -260,8 +203,5 @@ public class VirtualTerrain : MonoBehaviour {
         if (scoreboard) scoreboard.Retract();
     }
 
-    public long getNextCityPopulation()
-    {
-        return nextCityCasualties;
-    }
+    public long getNextCityPopulation() { return nextCityCasualties; }
 }

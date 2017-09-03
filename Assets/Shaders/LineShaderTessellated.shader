@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Lines With Tessellation" {
 Properties {
 	_Color ("Color", Color) = (1,0.5,0.5,1)
@@ -80,7 +82,7 @@ ds2ps DS (hsConst IC, const OutputPatch<hs2ds, 2> I, float2 uv : SV_DomainLocati
     float3 pos = lerp (I[0].pos, I[1].pos, uv.x);
     float len = length(I[0].pos - I[1].pos);
     pos.x += sin(uv.x*_Waves) * len * 0.1;
-    o.pos = mul (UNITY_MATRIX_MVP, float4(pos,1.0));
+    o.pos = UnityObjectToClipPos (float4(pos,1.0));
     return o;
 }
 
